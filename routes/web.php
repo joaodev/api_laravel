@@ -16,6 +16,10 @@ use App\Models\User;
 |
 */
 
+Route::get('/', function() {
+    return 'API';
+});
+
 Route::prefix('auth')->group(function () {
     Route::post('/login', LoginController::class)->middleware('guest');
     Route::post('/logout', LogoutController::class);
